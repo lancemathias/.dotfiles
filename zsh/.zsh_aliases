@@ -1,0 +1,3 @@
+alias l='ls -ahG'
+alias ll='ls -alhG'
+
