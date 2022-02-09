@@ -1,6 +1,12 @@
 " Disable vi compatibility for extra features
 set nocompatible
 
+" Make the backspace work right
+set backspace=2
+
+" Make the arrow keys work good
+set whichwrap+=[,],<,>
+
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -35,5 +41,8 @@ Plug 'https://github.com/preservim/nerdtree.git'
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" YouCompleteMe
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
