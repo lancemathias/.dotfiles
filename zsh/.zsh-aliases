@@ -1,0 +1,11 @@
+alias l='ls -ahG'
+alias ll='ls -alhG'
+
+# Pip and Python 
+alias python='python3'
+alias pip='pip3'
+
+# SSH into OCF remote computers
+# Make sure OCF_UNAME defined in zsh environment
+alias supernova='ssh $OCF_UNAME@supernova.ocf.berkeley.edu'
+alias tsunami='ssh $OCF_UNAME@tsunami.ocf.berkeley.edu'
