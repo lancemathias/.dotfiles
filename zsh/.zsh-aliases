@@ -1,3 +1,10 @@
+# zsh-aliases
+# Put aliases here for cleaner zshrc
+
+# Ya boi is lazy
+alias h='~'
+alias d='~/Documents'
+alias p='~/Projects'
 alias l='ls -ahG'
 alias ll='ls -alhG'
 
@@ -6,6 +13,24 @@ alias python='python3'
 alias pip='pip3'
 
 # SSH into OCF remote computers
-# Make sure OCF_UNAME defined in zsh environment
-alias supernova='ssh $OCF_UNAME@supernova.ocf.berkeley.edu'
-alias tsunami='ssh $OCF_UNAME@tsunami.ocf.berkeley.edu'
+# Make sure to specify user or define OCF_UNAME in zsh environment
+function supernova() {
+	if [[ $1 !=  "" ]]
+	then
+		ssh $1@supernova.ocf.berkeley.edu
+	else
+		ssh $OCF_UNAME@supernova.ocf.berkeley.edu
+	fi
+}
+
+function tsunami() {
+	if [[ $1 !=  "" ]]
+	then
+		ssh $1@tsunami.ocf.berkeley.edu
+	else
+		ssh $OCF_UNAME@tsunami.ocf.berkeley.edu
+	fi
+}
+
+# Decal login for special people like me
+alias decal='tsunami decal'
