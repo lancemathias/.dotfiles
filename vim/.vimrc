@@ -42,7 +42,7 @@ Plug 'https://github.com/preservim/nerdtree.git'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
+" VimCompletesMe
+Plug 'ackyshake/VimCompletesMe'
 
 call plug#end()

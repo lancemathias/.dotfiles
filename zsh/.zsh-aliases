@@ -5,6 +5,7 @@
 alias h='~'
 alias d='~/Documents'
 alias p='~/Projects'
+alias pic='~/Pictures'
 alias l='ls -ahG'
 alias ll='ls -alhG'
 
